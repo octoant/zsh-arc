@@ -1,3 +1,3 @@
 # zsh-arc
 
-Adcadia Plugin for Z-Shell.
+Arcadia Plugin for Z-Shell.
