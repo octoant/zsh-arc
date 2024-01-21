@@ -28,3 +28,23 @@
 0="${${(M)0:#/*}:-$PWD/$0}"
 
 source "${0:A:h}/zsh-arc.zsh"
+
+# Copy the function in order to override it
+functions -c git_prompt_info git_prompt_info_original
+
+# Override the function to support Arc, in addition to the Git
+#
+# No more than one version control prompt info can be displayed at a time
+# The priority is the following: Git, Arc
+git_prompt_info() {
+  local prompt_info
+
+  if [[ -z $prompt_info ]]; then
+    prompt_info=$(git_prompt_info_original)
+  fi
+  if [[ -z $prompt_info ]]; then
+    prompt_info=$(arc_prompt_info)
+  fi
+
+  echo "$prompt_info"
+}
