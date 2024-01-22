@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # ------------------------------------------------------------------------------
-# This file is part of Arcadia Plugin for zsh, the Z-Shell.
+# This file is part of Arc Plugin for zsh, the Z-Shell.
 #
 # Copyright (c) 2023 Bobur Zakirov <bmzakirov@yantex-team.ru>
 #
